@@ -1,0 +1,12 @@
+# Configuración del editor
+.vscode/
+
+# Dependencias
+node_modules/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Registros temporales
+*.log
