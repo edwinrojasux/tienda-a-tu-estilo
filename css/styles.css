@@ -23,10 +23,32 @@ img {
   padding: 20px 50px;
   background-color: #333;
 }
+.header__brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__logo {
+  width: 200px;
+  height: auto;
+}
 .header__icon {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 80px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
   cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.header__icon:hover {
+  transform: scale(1.08);
+}
+.header__icon:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
 }
 .header__icon-image {
   width: 50px;
