@@ -97,7 +97,7 @@ img {
 
     &__title {
         width: $fullWidth;
-        margin: 10px;
+        margin: 10px 0;
         font-size: 30px;
         font-weight: 600;
     }
@@ -115,27 +115,45 @@ img {
     @extend %borderBox;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
     width: 80%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 // Bloque: product-card
 .product-card {
+    @extend %borderBox;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: $lightColor;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     text-align: center;
     cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+    }
 
     &__image {
         @include productImage(200px, 15px);
+        height: 260px;
+        border-radius: 8px;
+        object-fit: cover;
     }
 
     &__title {
-        margin-bottom: 5px;
+        margin: 0 0 5px;
         font-size: 17px;
         font-weight: 500;
     }
 
     &__price {
+        margin: 0;
         font-size: 15px;
         font-weight: 300;
     }
@@ -179,6 +197,9 @@ img {
 
     &__delete-button {
         width: 30px;
+        padding: 0;
+        border: 0;
+        background-color: transparent;
         cursor: pointer;
     }
 
@@ -233,7 +254,7 @@ img {
 
     .products {
         grid-template-columns: 1fr;
-        padding: 10px;
+        padding: 20px 10px;
     }
 
     .product-card {
