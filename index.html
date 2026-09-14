@@ -15,104 +15,60 @@
     <title>Tienda a tu estilo</title>
 </head>
 
-<body>
+<body id="inicio">
     <header class="header">
         <button class="header__icon" type="button" aria-label="Abrir menú">
-            <img
-                class="header__icon-image"
-                src="img/icono_menu.svg"
-                alt=""
-                aria-hidden="true"
-            >
+            <img class="header__icon-image" src="img/icono_menu.svg" alt="" aria-hidden="true">
         </button>
 
-        <a
-            class="header__brand"
-            href="index.html"
-            aria-label="Ir a la página de inicio"
-        >
-            <img
-                class="header__logo"
-                src="img/logo.svg"
-                alt="A tu estilo"
-            >
+        <a class="header__brand" href="index.html" aria-label="Ir a la página de inicio">
+            <img class="header__logo" src="img/logo.svg" alt="A tu estilo">
         </a>
 
         <button class="header__icon" type="button" aria-label="Abrir carrito">
-            <img
-                class="header__icon-image"
-                src="img/Carrito.svg"
-                alt=""
-                aria-hidden="true"
-            >
+            <img class="header__icon-image" src="img/Carrito.svg" alt="" aria-hidden="true">
         </button>
     </header>
 
     <main>
         <section class="banner">
             <h1 class="banner__title">Productos nuevos</h1>
-            <p class="banner__description">
-                Conoce nuestros productos más recientes
-            </p>
+            <p class="banner__description">Conoce nuestros productos más recientes</p>
         </section>
 
-        <section class="products" aria-label="Productos disponibles">
+        <section class="products" id="productos" aria-label="Productos disponibles">
             <article class="product-card">
-                <img
-                    class="product-card__image"
-                    src="img/vestido_para_dama_1.webp"
-                    alt="Vestido midi para dama"
-                >
+                <img class="product-card__image" src="img/vestido_para_dama_1.webp" alt="Vestido midi para dama">
                 <h2 class="product-card__title">Vestido midi</h2>
                 <p class="product-card__price">$1,850.00</p>
             </article>
 
             <article class="product-card">
-                <img
-                    class="product-card__image"
-                    src="img/Chamarra1.jpg"
-                    alt="Chamarra urbana para caballero"
-                >
+                <img class="product-card__image" src="img/Chamarra1.jpg" alt="Chamarra urbana para caballero">
                 <h2 class="product-card__title">Chamarra urbana</h2>
                 <p class="product-card__price">$2,500.00</p>
             </article>
 
             <article class="product-card">
-                <img
-                    class="product-card__image"
-                    src="img/blusa_para_dama_1.webp"
-                    alt="Blusa clásica para dama"
-                >
+                <img class="product-card__image" src="img/blusa_para_dama_1.webp" alt="Blusa clásica para dama">
                 <h2 class="product-card__title">Blusa clásica</h2>
                 <p class="product-card__price">$600.00</p>
             </article>
 
             <article class="product-card">
-                <img
-                    class="product-card__image"
-                    src="img/vestido_para_dama_2.webp"
-                    alt="Vestido elegante para dama"
-                >
+                <img class="product-card__image" src="img/vestido_para_dama_2.webp" alt="Vestido elegante para dama">
                 <h2 class="product-card__title">Vestido elegante</h2>
                 <p class="product-card__price">$1,950.00</p>
             </article>
 
             <article class="product-card">
-                <img
-                    class="product-card__image"
-                    src="img/Chamarra2.jpg"
-                    alt="Chamarra casual para caballero"
-                >
+                <img class="product-card__image" src="img/Chamarra2.jpg" alt="Chamarra casual para caballero">
                 <h2 class="product-card__title">Chamarra casual</h2>
                 <p class="product-card__price">$2,350.00</p>
             </article>
 
             <article class="product-card">
-                <img
-                    class="product-card__image"
-                    src="img/blusa_para_dama_2.webp"
-                    alt="Blusa de verano para dama"
-                >
+                <img class="product-card__image" src="img/blusa_para_dama_2.webp" alt="Blusa de verano para dama">
                 <h2 class="product-card__title">Blusa de verano</h2>
                 <p class="product-card__price">$650.00</p>
             </article>
@@ -122,11 +78,7 @@
             <h2 class="cart__title">Carrito</h2>
 
             <div class="cart__item">
-                <img
-                    class="cart__product-image"
-                    src="img/Chamarra1.jpg"
-                    alt="Chamarra para caballero"
-                >
+                <img class="cart__product-image" src="img/Chamarra1.jpg" alt="Chamarra para caballero">
                 <p class="cart__product-name">Chamarra</p>
                 <p class="cart__product-price">$2,500.00</p>
 
@@ -145,5 +97,25 @@
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div>
+                <p class="footer__brand">A tu estilo</p>
+                <p class="footer__text">
+                    Moda y accesorios para cada ocasión.
+                </p>
+            </div>
+
+            <nav class="footer__navigation" aria-label="Navegación del pie de página">
+                <a class="footer__link" href="#inicio">Inicio</a>
+                <a class="footer__link" href="#productos">Productos</a>
+            </nav>
+        </div>
+
+        <p class="footer__copyright">
+            © 2026 A tu estilo. Todos los derechos reservados.
+        </p>
+    </footer>
 </body>
 </html>

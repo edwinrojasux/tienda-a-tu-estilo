@@ -27,12 +27,19 @@ $mobileBreakpoint: 480px;
 
 // Estilos generales
 body {
+    display: flex;
+    flex-direction: column;
     width: $fullWidth;
+    min-height: 100vh;
     margin: 0;
     color: $mainColor;
     font-family: $mainFont;
     font-size: 15px;
     font-weight: 300;
+}
+
+main {
+    flex: 1;
 }
 
 img {
@@ -208,6 +215,60 @@ img {
     }
 }
 
+// Bloque: footer
+.footer {
+    @extend %borderBox;
+    width: $fullWidth;
+    padding: 32px 50px 20px;
+    color: $lightColor;
+    background-color: $darkColor;
+
+    &__content {
+        @include flexbox(space-between, center);
+        gap: 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__brand {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__text {
+        margin: 8px 0 0;
+        opacity: 0.75;
+    }
+
+    &__navigation {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__link {
+        color: $lightColor;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+
+        &:hover,
+        &:focus-visible {
+            text-decoration: underline;
+            opacity: 0.7;
+        }
+    }
+
+    &__copyright {
+        max-width: 1200px;
+        margin: 24px auto 0;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        font-size: 13px;
+        text-align: center;
+        opacity: 0.7;
+    }
+}
+
 // Tabletas
 @media (max-width: $tabletBreakpoint) {
     .header {
@@ -235,6 +296,10 @@ img {
     .cart {
         top: 80px;
         width: 400px;
+    }
+
+    .footer {
+        padding: 28px 20px 18px;
     }
 }
 
@@ -289,6 +354,19 @@ img {
         &__product-name,
         &__product-price {
             margin: 0;
+        }
+    }
+
+    .footer {
+        &__content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__navigation {
+            flex-direction: column;
+            gap: 12px;
+            text-align: center;
         }
     }
 }
